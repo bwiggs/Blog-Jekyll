@@ -6,6 +6,7 @@ author: Brian Wigginton
 <div class="row">
 <ul>
 {% for post in site.posts %}
+{% if post.date %}
 <li>{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
